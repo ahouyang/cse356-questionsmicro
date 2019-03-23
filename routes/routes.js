@@ -1,21 +1,13 @@
-var faker = require("faker");
-
+// var faker = require("faker");
 var appRouter = function (app) {
-
-
 
   app.get("/", function (req, res) {
     res.status(200).send({ message: 'Welcome to our restful API' });
   });
 
-  app.get("/user", function (req, res) {
-    var data = ({
-      firstName: faker.name.firstName(),
-      lastName: faker.name.lastName(),
-      username: faker.internet.userName(),
-      email: faker.internet.email()
-    });
-    res.status(200).send(data);
+  app.get("/addquestion", function (req, res) {
+    var body = req.body;
+    // db.collection('')
   });
 
  app.get("/users/:num", function (req, res) {
